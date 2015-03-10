@@ -1,0 +1,11 @@
+{
+    "name": "blubolt/login-and-pay-with-amazon-sdk-php",
+    "description": "PHP SDK for Login and Pay with Amazon with Composer. Forked https://github.com/amzn/login-and-pay-with-amazon-sdk-php",
+    "authors": [
+        {
+            "name": "Michael Czolko",
+            "email": "michael@czolko.cz"
+        }
+    ],
+    "require": {}
+}
