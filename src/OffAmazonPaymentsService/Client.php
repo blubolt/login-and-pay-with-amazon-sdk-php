@@ -17,56 +17,6 @@
 
 
 /**
- *  @see OffAmazonPaymentsService_Interface
- */
-require_once 'OffAmazonPaymentsService/Interface.php';
-require_once 'OffAmazonPaymentsService/MerchantValues.php';
-require_once 'OffAmazonPaymentsService/Model/CaptureRequest.php';
-require_once 'OffAmazonPaymentsService/Model/CaptureResponse.php';
-require_once 'OffAmazonPaymentsService/Model/RefundRequest.php';
-require_once 'OffAmazonPaymentsService/Model/RefundResponse.php';
-require_once 'OffAmazonPaymentsService/Model/CloseAuthorizationRequest.php';
-require_once 'OffAmazonPaymentsService/Model/CloseAuthorizationResponse.php';
-require_once 'OffAmazonPaymentsService/Model/GetRefundDetailsRequest.php';
-require_once 'OffAmazonPaymentsService/Model/GetRefundDetailsResponse.php';
-require_once 'OffAmazonPaymentsService/Model/GetCaptureDetailsRequest.php';
-require_once 'OffAmazonPaymentsService/Model/GetCaptureDetailsResponse.php';
-require_once 'OffAmazonPaymentsService/Model/CloseOrderReferenceRequest.php';
-require_once 'OffAmazonPaymentsService/Model/CloseOrderReferenceResponse.php';
-require_once 'OffAmazonPaymentsService/Model/ConfirmOrderReferenceRequest.php';
-require_once 'OffAmazonPaymentsService/Model/ConfirmOrderReferenceResponse.php';
-require_once 'OffAmazonPaymentsService/Model/GetOrderReferenceDetailsRequest.php';
-require_once 'OffAmazonPaymentsService/Model/GetOrderReferenceDetailsResponse.php';
-require_once 'OffAmazonPaymentsService/Model/AuthorizeRequest.php';
-require_once 'OffAmazonPaymentsService/Model/AuthorizeResponse.php';
-require_once 'OffAmazonPaymentsService/Model/SetOrderReferenceDetailsRequest.php';
-require_once 'OffAmazonPaymentsService/Model/SetOrderReferenceDetailsResponse.php';
-require_once 'OffAmazonPaymentsService/Model/GetAuthorizationDetailsRequest.php';
-require_once 'OffAmazonPaymentsService/Model/GetAuthorizationDetailsResponse.php';
-require_once 'OffAmazonPaymentsService/Model/CancelOrderReferenceRequest.php';
-require_once 'OffAmazonPaymentsService/Model/CancelOrderReferenceResponse.php';
-require_once 'OffAmazonPaymentsService/Model/AuthorizeOnBillingAgreementRequest.php';
-require_once 'OffAmazonPaymentsService/Model/AuthorizeOnBillingAgreementResponse.php';
-require_once 'OffAmazonPaymentsService/Model/CloseBillingAgreementRequest.php';
-require_once 'OffAmazonPaymentsService/Model/CloseBillingAgreementResponse.php';
-require_once 'OffAmazonPaymentsService/Model/ConfirmBillingAgreementRequest.php';
-require_once 'OffAmazonPaymentsService/Model/ConfirmBillingAgreementResponse.php';
-require_once 'OffAmazonPaymentsService/Model/CreateOrderReferenceForIdRequest.php';
-require_once 'OffAmazonPaymentsService/Model/CreateOrderReferenceForIdResponse.php';
-require_once 'OffAmazonPaymentsService/Model/GetBillingAgreementDetailsRequest.php';
-require_once 'OffAmazonPaymentsService/Model/GetBillingAgreementDetailsResponse.php';
-require_once 'OffAmazonPaymentsService/Model/SetBillingAgreementDetailsRequest.php';
-require_once 'OffAmazonPaymentsService/Model/SetBillingAgreementDetailsResponse.php';
-require_once 'OffAmazonPaymentsService/Model/ValidateBillingAgreementRequest.php';
-require_once 'OffAmazonPaymentsService/Model/ValidateBillingAgreementResponse.php';
-require_once 'OffAmazonPaymentsService/Model/GetProviderCreditReversalDetailsRequest.php';
-require_once 'OffAmazonPaymentsService/Model/GetProviderCreditReversalDetailsResponse.php';
-require_once 'OffAmazonPaymentsService/Model/GetProviderCreditDetailsRequest.php';
-require_once 'OffAmazonPaymentsService/Model/GetProviderCreditDetailsResponse.php';
-require_once 'OffAmazonPaymentsService/Model/ReverseProviderCreditRequest.php';
-require_once 'OffAmazonPaymentsService/Model/ReverseProviderCreditResponse.php';
-
-/**
  * Implementation of the OffAmazonPaymentsService interface
  * that implements client calls to the web service API
  *
