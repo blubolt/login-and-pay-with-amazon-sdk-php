@@ -7,8 +7,8 @@
             "email": "michael@czolko.cz"
         }
     ],
-    "autoload": {
-        "files": ["src/OffAmazonPaymentsService/Client.php"]
-    },
+	"autoload": {
+		"classmap": ["src/"]
+	},
     "require": {}
 }
