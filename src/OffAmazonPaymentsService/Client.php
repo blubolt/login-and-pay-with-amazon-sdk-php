@@ -789,13 +789,13 @@ class OffAmazonPaymentsService_Client implements OffAmazonPaymentsService_Interf
             $retries = 0;
             do {
                 try {
+                        d($parameters);
                         $response = $this->_httpPost($parameters);
                         if ($response['Status'] === 200) {
                             $shouldRetry = false;
                         } else {
                             if ($response['Status'] === 500 || $response['Status'] === 503) {
-                            	
-                            	require_once 'OffAmazonPaymentsService/Model/ErrorResponse.php';
+
                             	$errorResponse = OffAmazonPaymentsService_Model_ErrorResponse::fromXML($response['ResponseBody']);
                             	
                             	$errors = $errorResponse->getError();
@@ -812,11 +812,9 @@ class OffAmazonPaymentsService_Client implements OffAmazonPaymentsService_Interf
                        }
                 /* Rethrow on deserializer error */
                 } catch (Exception $e) {
-                    require_once 'OffAmazonPaymentsService/Exception.php';
                     if ($e instanceof OffAmazonPaymentsService_Exception) {
                         throw $e;
                     } else {
-                        require_once 'OffAmazonPaymentsService/Exception.php';
                         throw new OffAmazonPaymentsService_Exception(array('Exception' => $e, 'Message' => $e->getMessage()));
                     }
                 }
@@ -846,7 +844,6 @@ class OffAmazonPaymentsService_Client implements OffAmazonPaymentsService_Interf
                 $code = $errorMatcherOne[2];
                 $message = $errorMatcherOne[3];
 
-                require_once 'OffAmazonPaymentsService/Exception.php';
                 $ex = new OffAmazonPaymentsService_Exception(array ('Message' => $message, 'StatusCode' => $status, 'ErrorCode' => $code,
                                                            'ErrorType' => 'Unknown', 'RequestId' => $requestId, 'XML' => $responseBody,
                                                            'ResponseHeaderMetadata' => $responseHeaderMetadata));
@@ -858,7 +855,6 @@ class OffAmazonPaymentsService_Client implements OffAmazonPaymentsService_Interf
                 $code = $errorMatcherThree[2];
                 $message = $errorMatcherThree[3];
                 $requestId = $errorMatcherThree[5];
-                require_once 'OffAmazonPaymentsService/Exception.php';
                 $ex = new OffAmazonPaymentsService_Exception(array ('Message' => $message, 'StatusCode' => $status, 'ErrorCode' => $code,
                                                               'ErrorType' => $type, 'RequestId' => $requestId, 'XML' => $responseBody,
                                                               'ResponseHeaderMetadata' => $responseHeaderMetadata));
@@ -869,17 +865,14 @@ class OffAmazonPaymentsService_Client implements OffAmazonPaymentsService_Interf
                 $code = $errorMatcherTwo[1];
                 $message = $errorMatcherTwo[2];
                 $requestId = $errorMatcherTwo[4];
-                require_once 'OffAmazonPaymentsService/Exception.php';
                 $ex = new OffAmazonPaymentsService_Exception(array ('Message' => $message, 'StatusCode' => $status, 'ErrorCode' => $code,
                                                               'ErrorType' => 'Unknown', 'RequestId' => $requestId, 'XML' => $responseBody,
                                                               'ResponseHeaderMetadata' => $responseHeaderMetadata));
 
             } else {
-                require_once 'OffAmazonPaymentsService/Exception.php';
                 $ex = new OffAmazonPaymentsService_Exception(array('Message' => 'Internal Error', 'StatusCode' => $status, 'ResponseHeaderMetadata' => $responseHeaderMetadata));
             }
         } else {
-            require_once 'OffAmazonPaymentsService/Exception.php';
             $ex = new OffAmazonPaymentsService_Exception(array('Message' => 'Internal Error', 'StatusCode' => $status, 'ResponseHeaderMetadata' => $responseHeaderMetadata));
         }
         return $ex;
@@ -896,7 +889,7 @@ class OffAmazonPaymentsService_Client implements OffAmazonPaymentsService_Interf
 
         $query = $this->_getParametersAsString($parameters);
         $url = parse_url ($this->_config['ServiceURL']);
-	    $uri = array_key_exists('path', $url) ? $url['path'] : null;
+        $uri = array_key_exists('path', $url) ? $url['path'] : null;
         if (!isset ($uri)) {
                 $uri = "/";
         }
@@ -938,7 +931,6 @@ class OffAmazonPaymentsService_Client implements OffAmazonPaymentsService_Interf
         if (!$response = curl_exec($ch)) {
            $error_msg = "Unable to post request, underlying exception of " . curl_error($ch);
            curl_close($ch);
-           require_once 'OffAmazonPaymentsService/Exception.php';
            throw new OffAmazonPaymentsService_Exception(array('Message' => $error_msg));    
         }
 
@@ -958,8 +950,7 @@ class OffAmazonPaymentsService_Client implements OffAmazonPaymentsService_Interf
                 }
             } 
         }
- 
-        require_once 'OffAmazonPaymentsService/Model/ResponseHeaderMetadata.php';
+
         $responseHeaderMetadata = new OffAmazonPaymentsService_Model_ResponseHeaderMetadata(
               $headers['x-mws-request-id'],
               $headers['x-mws-response-context'],
@@ -981,7 +972,6 @@ class OffAmazonPaymentsService_Client implements OffAmazonPaymentsService_Interf
             $delay = (int) (pow(4, $retries) * 100000) ;
             usleep($delay);
         } else {
-            require_once 'OffAmazonPaymentsService/Exception.php';
             throw new OffAmazonPaymentsService_Exception (array ('Message' => "Maximum number of retry attempts reached :  $retries", 'StatusCode' => $status));
         }
     }
