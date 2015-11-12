@@ -15,10 +15,6 @@
  * *****************************************************************************
  */
 
-require_once 'OffAmazonPaymentsNotifications/Impl/Message.php';
-require_once 'OffAmazonPaymentsNotifications/Impl/VerifySignature.php';
-require_once 'OffAmazonPaymentsNotifications/InvalidMessageException.php';
-
 /**
  * Performs validation of the sns message to
  * make sure signatures match and is signed by 

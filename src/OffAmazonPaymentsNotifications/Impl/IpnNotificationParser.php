@@ -15,9 +15,6 @@
  * *****************************************************************************
  */
 
-require_once 'OffAmazonPaymentsNotifications/Impl/Message.php';
-require_once 'OffAmazonPaymentsNotifications/Model/IpnNotificationMetadata.php';
-
 /**
  * Wrapper around a decoded IPN notification message
  * in json format

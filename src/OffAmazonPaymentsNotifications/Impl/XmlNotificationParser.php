@@ -15,16 +15,6 @@
  * *****************************************************************************
  */
 
-require_once 'OffAmazonPaymentsNotifications/Impl/Message.php';
-require_once 'OffAmazonPaymentsNotifications/Model/AuthorizationNotification.php';
-require_once 'OffAmazonPaymentsNotifications/Model/BillingAgreementNotification.php';
-require_once 'OffAmazonPaymentsNotifications/Model/RefundNotification.php';
-require_once 'OffAmazonPaymentsNotifications/Model/CaptureNotification.php';
-require_once 'OffAmazonPaymentsNotifications/Model/OrderReferenceNotification.php';
-require_once 'OffAmazonPaymentsNotifications/Model/ProviderCreditNotification.php';
-require_once 'OffAmazonPaymentsNotifications/Model/ProviderCreditReversalNotification.php';
-require_once 'OffAmazonPaymentsNotifications/Model/SolutionProviderMerchantNotification.php';
-
 
 /**
  * Wrapper around a decoded IPN notification message to create

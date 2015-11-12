@@ -15,7 +15,7 @@
  * *****************************************************************************
  */
 
-require_once 'OffAmazonPayments/Model.php';
+////require_once 'OffAmazonPayments/Model.php';
 
 /**
  * OffAmazonPaymentsNotifications_Model_OrderReference

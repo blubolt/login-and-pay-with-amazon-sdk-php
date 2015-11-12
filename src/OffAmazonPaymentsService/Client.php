@@ -789,7 +789,6 @@ class OffAmazonPaymentsService_Client implements OffAmazonPaymentsService_Interf
             $retries = 0;
             do {
                 try {
-                        d($parameters);
                         $response = $this->_httpPost($parameters);
                         if ($response['Status'] === 200) {
                             $shouldRetry = false;

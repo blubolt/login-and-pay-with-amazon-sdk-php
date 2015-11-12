@@ -19,7 +19,7 @@
 /**
  *  @see OffAmazonPaymentsNotifications_Model
  */
-require_once 'OffAmazonPayments/Model.php';  
+//require_once 'OffAmazonPayments/Model.php';
 
     
 

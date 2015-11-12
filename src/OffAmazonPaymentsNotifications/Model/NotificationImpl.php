@@ -15,10 +15,10 @@
  * *****************************************************************************
  */
 
-require_once 'OffAmazonPayments/Model.php';
-require_once 'OffAmazonPaymentsNotifications/Notification.php';
-require_once 'OffAmazonPaymentsNotifications/NotificationMetadata.php';
-require_once 'OffAmazonPaymentsNotifications/Impl/Message.php';
+////require_once 'OffAmazonPayments/Model.php';
+////require_once 'OffAmazonPaymentsNotifications/Notification.php';
+////require_once 'OffAmazonPaymentsNotifications/NotificationMetadata.php';
+////require_once 'OffAmazonPaymentsNotifications/Impl/Message.php';
 
 /**
  * NotificationsImpl class, contains common functionality for

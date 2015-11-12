@@ -19,7 +19,7 @@
  *
  * @see OffAmazonPaymentsNotification_Model
  */
-require_once 'OffAmazonPayments/Model.php';
+//require_once 'OffAmazonPayments/Model.php';
 
 /**
  * OffAmazonPaymentsNotification_Model_ProviderCreditReversalDetails

@@ -15,7 +15,7 @@
  * *****************************************************************************
  */
 
-require_once 'OffAmazonPaymentsNotifications/NotificationMetadata.php';
+////require_once 'OffAmazonPaymentsNotifications/NotificationMetadata.php';
 
 /**
  * Common functions for classes that extend the message information

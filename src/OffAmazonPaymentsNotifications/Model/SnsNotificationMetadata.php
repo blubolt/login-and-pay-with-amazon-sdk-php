@@ -15,7 +15,7 @@
  * *****************************************************************************
  */
 
-require_once 'OffAmazonPaymentsNotifications/Model/NotificationMetadataImpl.php';
+////require_once 'OffAmazonPaymentsNotifications/Model/NotificationMetadataImpl.php';
 
 /**
  * SNS Message information

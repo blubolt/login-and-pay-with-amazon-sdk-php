@@ -212,11 +212,11 @@ abstract class OffAmazonPayments_Model
                 if ($this->_isComplexType($fieldType)) {
                     $elements = $xpath->query("//*[local-name()='$fieldName']", $dom);
                     if ($elements->length == 1) {
-                        include_once str_replace(
-                            '_',
-                            DIRECTORY_SEPARATOR,
-                            $fieldType
-                        ) . ".php";
+//                        include_once str_replace(
+//                            '_',
+//                            DIRECTORY_SEPARATOR,
+//                            $fieldType
+//                        ) . ".php";
                         $this->fields[$fieldName]['FieldValue'] 
                             = new $fieldType($elements->item(0));
                     }   
